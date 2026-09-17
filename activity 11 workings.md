@@ -144,3 +144,25 @@ Order By s."Subject_Name" ASC
 | Robotics Fundamentals               | Friday |
 | User Experience Design              | Friday |
 | Visual Arts                         | Friday |
+
+2.
+select s."Subject_Name", c."Room"
+From "Class" c
+Join "Subject" s ON s."Subject_Code" = c."Subject_Code"
+Where c."Room" ILIKE 'A105'
+Order By s."Subject_Name" ASC
+
+| Subject_Name                        | Room |
+| ----------------------------------- | ---- |
+| Artificial Intelligence Foundations | A105 |
+| Australian History                  | A105 |
+| Database Fundamentals               | A105 |
+| Database Fundamentals               | A105 |
+| Design Thinking                     | A105 |
+| Digital Technologies                | A105 |
+| English Foundations                 | A105 |
+| Environmental Science               | A105 |
+| General Science                     | A105 |
+| Programming Fundamentals            | A105 |
+| Robotics Fundamentals               | A105 |
+| User Experience Design              | A105 |

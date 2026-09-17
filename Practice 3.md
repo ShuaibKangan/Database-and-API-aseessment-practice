@@ -228,3 +228,115 @@ group by s."student_id";
 | 100026     | Ella       | Stewart   |
 | 100028     | Lily       | Rogers    |
 ***
+
+## Joins (inner joins only):
+1.
+select pj."job_id", s."first_name" || ' ' || s."last_name" AS "full name"
+from "printjobs" pj
+join "students" s on pj."student_id" = s."student_id";
+
+| job_id | full name       |
+| ------ | --------------- |
+| 1      | Charlotte Baker |
+| 2      | Zoe Edwards     |
+| 3      | Mia Hall        |
+| 4      | Olivia Smith    |
+| 5      | Mason Kelly     |
+| 6      | Amelia Adams    |
+| 7      | Lily Rogers     |
+| 8      | Samuel Morris   |
+| 9      | Henry Scott     |
+| 10     | Noah Brown      |
+| 11     | Liam Jones      |
+| 12     | Chloe Parker    |
+| 13     | Charlotte Baker |
+| 14     | Mason Kelly     |
+| 15     | Grace Phillips  |
+| 16     | Chloe Parker    |
+| 17     | William Turner  |
+| 18     | Noah Brown      |
+| 19     | Chloe Parker    |
+| 20     | Oscar Mitchell  |
+| 21     | Chloe Parker    |
+| 22     | Chloe Parker    |
+| 23     | Jack Green      |
+| 24     | Jack Green      |
+| 25     | Sophia Nguyen   |
+| 26     | Amelia Adams    |
+| 27     | Oscar Mitchell  |
+| 28     | Mia Hall        |
+| 29     | Thomas Collins  |
+| 30     | Ava Wilson      |
+| 31     | Grace Phillips  |
+| 32     | Mia Hall        |
+| 33     | Sophia Nguyen   |
+| 34     | Mason Kelly     |
+| 35     | Benjamin Evans  |
+| 36     | Amelia Adams    |
+| 37     | Ella Stewart    |
+| 38     | James Campbell  |
+| 39     | Amelia Adams    |
+| 40     | Evelyn Roberts  |
+| 41     | Daniel Reed     |
+| 42     | Sophia Nguyen   |
+| 43     | Isabella Chen   |
+| 44     | James Campbell  |
+| 45     | Charlotte Baker |
+| 46     | Leo Nelson      |
+| 47     | Isabella Chen   |
+| 48     | Chloe Parker    |
+| 49     | Mia Hall        |
+| 50     | Lily Rogers     |
+| 51     | Grace Phillips  |
+| 52     | Amelia Adams    |
+| 53     | Thomas Collins  |
+| 54     | Amelia Adams    |
+| 55     | Isabella Chen   |
+| 56     | Chloe Parker    |
+| 57     | Ella Stewart    |
+| 58     | Noah Brown      |
+| 59     | Thomas Collins  |
+| 60     | Chloe Parker    |
+| 61     | Ella Stewart    |
+| 62     | Benjamin Evans  |
+| 63     | Mia Hall        |
+| 64     | Ava Wilson      |
+| 65     | Mason Kelly     |
+| 66     | Grace Phillips  |
+| 67     | Zoe Edwards     |
+| 68     | Ava Wilson      |
+| 69     | Ella Stewart    |
+| 70     | Charlotte Baker |
+| 71     | James Campbell  |
+| 72     | Henry Scott     |
+| 73     | Zoe Edwards     |
+| 74     | Evelyn Roberts  |
+| 75     | Grace Phillips  |
+| 76     | Oscar Mitchell  |
+| 77     | Ava Wilson      |
+| 78     | Oscar Mitchell  |
+| 79     | Liam Jones      |
+| 80     | Benjamin Evans  |
+| 81     | Ava Wilson      |
+| 82     | Mason Kelly     |
+| 83     | Leo Nelson      |
+| 84     | Zoe Edwards     |
+| 85     | Mia Hall        |
+| 86     | Ella Stewart    |
+| 87     | Amelia Adams    |
+| 88     | Daniel Reed     |
+| 89     | Zoe Edwards     |
+| 90     | Samuel Morris   |
+| 91     | Noah Brown      |
+| 92     | Grace Phillips  |
+| 93     | Olivia Smith    |
+| 94     | Ava Wilson      |
+| 95     | Jack Green      |
+| 96     | Sophia Nguyen   |
+| 97     | Leo Nelson      |
+| 98     | Zoe Edwards     |
+| 99     | Noah Brown      |
+| 100    | Liam Jones      |
+___
+
+2. 

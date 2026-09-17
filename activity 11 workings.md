@@ -70,3 +70,45 @@ LIMIT 5;
 | DES201       | User Experience Design              |
 | ART101       | Visual Arts                         |
 
+4.
+select t."Teacher_ID", t."Teacher_Name" 
+FROM "Teacher" t
+order by t."Teacher_Name" asc;
+
+| Teacher_ID | Teacher_Name   |
+| ---------- | -------------- |
+| T001       | Amelia Hart    |
+| T006       | Ethan Brown    |
+| T005       | Grace Nguyen   |
+| T007       | Isabella Rossi |
+| T008       | Jack Thompson  |
+| T002       | Liam Chen      |
+| T009       | Maya Singh     |
+| T004       | Noah Williams  |
+| T010       | Oliver Wilson  |
+| T003       | Sofia Patel    |
+
+5. 
+select distinct c."Room"
+FROM "Class" c
+order by c."Room" ASC
+&
+select c."Room"
+FROM "Class" c
+Group by c."Room"
+Order by c."Room" ASC
+
+| Room |
+| ---- |
+| A105 |
+| A210 |
+| B201 |
+| B204 |
+| C301 |
+| C305 |
+| D102 |
+| D205 |
+| E110 |
+| E205 |
+
+## 

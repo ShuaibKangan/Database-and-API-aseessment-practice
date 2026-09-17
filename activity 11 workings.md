@@ -33,18 +33,12 @@ FROM "Class" c
 join "Subject" s ON s."Subject_Code" = c."Subject_Code"
 WHERE c."Day" ILIKE 'Monday'
 order by "Start_Time"
-LIMIT 10;
+LIMIT 5;
 
-| Day    | Subject_Code | Subject_Name             | Start_Time | End_Time |
-| ------ | ------------ | ------------------------ | ---------- | -------- |
-| Monday | ENG101       | English Foundations      | 08:30:00   | 10:00:00 |
-| Monday | MAT201       | Applied Mathematics      | 08:30:00   | 10:00:00 |
-| Monday | ICT301       | Database Fundamentals    | 08:30:00   | 10:00:00 |
-| Monday | BUS101       | Business Essentials      | 08:30:00   | 10:00:00 |
-| Monday | ART101       | Visual Arts              | 08:30:00   | 10:00:00 |
-| Monday | ICT201       | Programming Fundamentals | 10:15:00   | 11:45:00 |
-| Monday | SCI201       | Environmental Science    | 10:15:00   | 11:45:00 |
-| Monday | BUS301       | Project Management       | 10:15:00   | 11:45:00 |
-| Monday | HIS101       | Modern History           | 10:15:00   | 11:45:00 |
-| Monday | DES201       | User Experience Design   | 10:15:00   | 11:45:00 |
-
+| Day    | Subject_Code | Subject_Name          | Start_Time | End_Time |
+| ------ | ------------ | --------------------- | ---------- | -------- |
+| Monday | MAT201       | Applied Mathematics   | 08:30:00   | 10:00:00 |
+| Monday | ICT301       | Database Fundamentals | 08:30:00   | 10:00:00 |
+| Monday | BUS101       | Business Essentials   | 08:30:00   | 10:00:00 |
+| Monday | ART101       | Visual Arts           | 08:30:00   | 10:00:00 |
+| Monday | ENG101       | English Foundations   | 08:30:00   | 10:00:00 |

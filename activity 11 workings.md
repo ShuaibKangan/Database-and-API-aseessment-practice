@@ -92,7 +92,9 @@ order by t."Teacher_Name" asc;
 select distinct c."Room"
 FROM "Class" c
 order by c."Room" ASC
-&
+
+|
+
 select c."Room"
 FROM "Class" c
 Group by c."Room"

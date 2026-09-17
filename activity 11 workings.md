@@ -113,4 +113,34 @@ Order by c."Room" ASC
 | E110 |
 | E205 |
 
-## 
+## 13.12
+
+1.
+select s."Subject_Name", c."Day"
+From "Class" c
+Join "Subject" s ON s."Subject_Code" = c."Subject_Code"
+Where c."Day" ILIKE 'Friday'
+Order By s."Subject_Name" ASC
+
+| Subject_Name                        | Day    |
+| ----------------------------------- | ------ |
+| Academic Writing                    | Friday |
+| Applied Mathematics                 | Friday |
+| Artificial Intelligence Foundations | Friday |
+| Australian History                  | Friday |
+| Business Essentials                 | Friday |
+| Database Fundamentals               | Friday |
+| Design Thinking                     | Friday |
+| Digital Media                       | Friday |
+| Digital Technologies                | Friday |
+| English Foundations                 | Friday |
+| Environmental Science               | Friday |
+| General Mathematics                 | Friday |
+| General Science                     | Friday |
+| Marketing Principles                | Friday |
+| Modern History                      | Friday |
+| Programming Fundamentals            | Friday |
+| Project Management                  | Friday |
+| Robotics Fundamentals               | Friday |
+| User Experience Design              | Friday |
+| Visual Arts                         | Friday |

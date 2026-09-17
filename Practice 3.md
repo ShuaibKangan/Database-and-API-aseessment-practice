@@ -157,3 +157,74 @@ ORDER BY "course_name" asc
 | DES101      | Product Design Fundamentals | Introductory principles of product design, prototyping and 3D modelling.      | Mrs. Lisa Chen |
 ###
 
+## Find specific Records:
+
+1.
+select *
+from "printjobs" pj
+where "duration_min" > '179'
+
+| job_id | print_start_time | duration_min | student_id | course_code | printer_id |
+| ------ | ---------------- | ------------ | ---------- | ----------- | ---------- |
+| 71     | 8/13/2026 16:00  | 479          | 100021     | ENG202      | P0007      |
+| 63     | 8/12/2026 15:15  | 478          | 100010     | DES101      | P0003      |
+| 75     | 8/14/2026 17:00  | 477          | 100020     | DES101      | P0004      |
+| 252    | 9/22/2026 11:45  | 474          | 100008     | DES101      | P0003      |
+| 127    | 8/25/2026 9:00   | 472          | 100022     | DES101      | P0007      |
+| 279    | 9/27/2026 18:15  | 468          | 100014     | DES101      | P0006      |
+| 118    | 8/24/2026 7:15   | 464          | 100000     | DES101      | P0002      |
+| 245    | 9/20/2026 12:15  | 464          | 100010     | DES101      | P0002      |
+| 246    | 9/21/2026 7:30   | 463          | 100025     | ENG202      | P0002      |
+| 195    | 9/10/2026 15:45  | 461          | 100013     | ENG202      | P0003      |
+___
+
+2.
+select p."printer_model"
+from "printjobs" pj
+join "printers" p on p."printer_id" = pj."printer_id"
+where p."printer_model" LIKE '%bracket%'
+group by printer_model
+
+### Success. No rows returned
+***
+
+3.
+select p."printer_model"
+from "printjobs" pj
+join "printers" p on p."printer_id" = pj."printer_id"
+where p."printer_type" = 'SLS' 
+group by p.printer_id
+
+| printer_model |
+| ------------- |
+| Form 3        |
+| Fuse 1+       |
+| Photon Mono X |
+___
+
+4.
+select s."student_id", s."first_name", s."last_name"
+from "students" s 
+join "printjobs" pj on s."student_id" = pj.student_id
+join "courses" c on c."course_code" = pj."course_code"
+where c."course_name" ILIKE '%Design%'
+group by s."student_id";
+
+| student_id | first_name | last_name |
+| ---------- | ---------- | --------- |
+| 100000     | Olivia     | Smith     |
+| 100002     | Emma       | Williams  |
+| 100004     | Ava        | Wilson    |
+| 100006     | Sophia     | Nguyen    |
+| 100008     | Isabella   | Chen      |
+| 100010     | Mia        | Hall      |
+| 100012     | Charlotte  | Baker     |
+| 100014     | Amelia     | Adams     |
+| 100016     | Harper     | Carter    |
+| 100018     | Evelyn     | Roberts   |
+| 100020     | Grace      | Phillips  |
+| 100022     | Chloe      | Parker    |
+| 100024     | Zoe        | Edwards   |
+| 100026     | Ella       | Stewart   |
+| 100028     | Lily       | Rogers    |
+***

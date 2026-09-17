@@ -27,7 +27,7 @@ LIMIT 10;
 | Monday | User Experience Design   | 10:15:00   | 11:45:00 |
 | Monday | English Foundations      | 08:30:00   | 10:00:00 |
 
-3.
+2.
 select c."Day", s."Subject_Code", s."Subject_Name", c."Start_Time", c."End_Time"
 FROM "Class" c
 join "Subject" s ON s."Subject_Code" = c."Subject_Code"
@@ -42,3 +42,31 @@ LIMIT 5;
 | Monday | BUS101       | Business Essentials   | 08:30:00   | 10:00:00 |
 | Monday | ART101       | Visual Arts           | 08:30:00   | 10:00:00 |
 | Monday | ENG101       | English Foundations   | 08:30:00   | 10:00:00 |
+
+3.
+  select s."Subject_Code", s."Subject_Name"
+  FROM "Subject" s
+  order by s."Subject_Name" asc
+| Subject_Code | Subject_Name                        |
+| ------------ | ----------------------------------- |
+| ENG201       | Academic Writing                    |
+| MAT201       | Applied Mathematics                 |
+| AI101        | Artificial Intelligence Foundations |
+| HIS201       | Australian History                  |
+| BUS101       | Business Essentials                 |
+| ICT301       | Database Fundamentals               |
+| DES101       | Design Thinking                     |
+| ART201       | Digital Media                       |
+| ICT101       | Digital Technologies                |
+| ENG101       | English Foundations                 |
+| SCI201       | Environmental Science               |
+| MAT101       | General Mathematics                 |
+| SCI101       | General Science                     |
+| BUS201       | Marketing Principles                |
+| HIS101       | Modern History                      |
+| ICT201       | Programming Fundamentals            |
+| BUS301       | Project Management                  |
+| ROB101       | Robotics Fundamentals               |
+| DES201       | User Experience Design              |
+| ART101       | Visual Arts                         |
+
